@@ -15,11 +15,11 @@ model Creature{
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   name String
-  photo String
+  photo String @db.Text
   country_code String
   country_name String
   books String
-  description String
-  characteristics String
+  description String @db.Text
+  characteristics String 
 }
 

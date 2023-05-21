@@ -3,8 +3,14 @@ import { db } from '../lib/db.server';
 import { z } from 'zod';
 
 export const creatureRouter = trpc.router({
+  getAll: trpc.procedure.query(() => {
+    return db.creature.findMany();
+  }),
+
   getRandom: trpc.procedure.query(async () => {
-    const id = Math.floor(Math.random() * 20);
+    // I messed up my database and my first id starts from 22 and last is 42
+    // so that is why
+    const id = Math.floor(Math.random() * (42 - 22 + 1) + 22);
     const creature = await db.creature.findUnique({
       where: {
         id: id,

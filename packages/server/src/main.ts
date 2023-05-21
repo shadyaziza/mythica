@@ -8,12 +8,16 @@ import cors from 'cors';
 
 const app: Application = express();
 
+const createContext = ({}: trpcX.CreateExpressContextOptions) => ({});
+
+app.use(express.json());
 app.use(cors());
 
 app.use(
-  '/trpc',
+  '/mythica',
   trpcX.createExpressMiddleware({
     router: appRouter,
+    createContext,
   })
 );
 
