@@ -45,7 +45,7 @@ export function RandomCreature() {
 
   const { classes } = useStyles();
 
-  if (response.isLoading) {
+  if (response.isLoading || response.isRefetching) {
     return <AppLoader />;
   }
   if (response.isError || !response.data?.creature) {
@@ -55,7 +55,7 @@ export function RandomCreature() {
   const creature = response.data?.creature;
 
   return (
-    <Suspense fallback={<AppLoader />}>
+    <>
       <Card withBorder radius="md" p="md" className={classes.card}>
         <Card.Section>
           <Image src={creature.photo} alt={creature.name} height={300} />
@@ -67,16 +67,7 @@ export function RandomCreature() {
               {creature.name}
             </Text>
           </Group>
-          {/* <Text fz="sm" mt="xs">
-            Congrats you have unlocked this Mythica
-          </Text> */}
         </Card.Section>
-
-        {/* <Card.Section className={classes.section}>
-          <Text mt="md" className={classes.label} c="dimmed">
-            Perfect for you, if you enjoy
-          </Text>
-        </Card.Section> */}
 
         <Group mt="xs">
           <ActionIcon variant="default" radius="md" size={36}>
@@ -93,6 +84,6 @@ export function RandomCreature() {
         </Group>
       </Card>
       <CreatureDetails id={creature.id} />
-    </Suspense>
+    </>
   );
 }

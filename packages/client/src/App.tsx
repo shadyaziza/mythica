@@ -9,13 +9,8 @@ import {
   ColorSchemeProvider,
   Flex,
   MantineProvider,
-  useMantineColorScheme,
 } from '@mantine/core';
 import { SwitchToggle } from './Components';
-// 1. npm i server --workspace=client
-// create lib/trpc.ts
-// 2. npm i @trpc/server @trpc/client @trpc/react-query @tanstack/react-query --workspace=client
-// 3. handle app.ts
 
 const BACKEND_URL = 'http://localhost:3000/mythica';
 
@@ -45,7 +40,6 @@ function App() {
             <Flex
               mih={50}
               my={-500}
-              // bg="rgba(0, 0, 0, .3)"
               gap="lg"
               align="start"
               justify="space-between"
