@@ -8,9 +8,9 @@ export const creatureRouter = trpc.router({
   }),
 
   getRandom: trpc.procedure.query(async () => {
-    // I messed up my database and my first id starts from 22 and last is 42
+    // I messed up my database and my first id starts from 64 and last is 83
     // so that is why
-    const id = Math.floor(Math.random() * (42 - 22 + 1) + 22);
+    const id = Math.floor(Math.random() * (83 - 64 + 1) + 64);
     const creature = await db.creature.findUnique({
       where: {
         id: id,
@@ -20,6 +20,7 @@ export const creatureRouter = trpc.router({
       const { name, photo } = creature;
       return {
         creature: {
+          id: id,
           name: name,
           photo: photo,
         },

@@ -3,8 +3,7 @@ const { Prisma } = require('@prisma/client');
 export const creatures = [
   {
     name: 'Dragon',
-    photo:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Chinese_dragon_illustration.jpg/1200px-Chinese_dragon_illustration.jpg',
+    photo: 'https://i.imgur.com/hWiYxQP.jpg',
     country_name: 'China',
     country_code: 'CN',
     books: 'Journey to the West,The Hobbit,Harry Potter and the Goblet of Fire',
@@ -14,8 +13,7 @@ export const creatures = [
   },
   {
     name: 'Unicorn',
-    photo:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Unicorn_Collage.jpg/1200px-Unicorn_Collage.jpg',
+    photo: 'https://i.imgur.com/mapSy0u.jpg',
     country_name: 'Europe',
     country_code: 'EU',
     books:
@@ -26,8 +24,7 @@ export const creatures = [
   },
   {
     name: 'Phoenix',
-    photo:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Phoenix-Fabelwesen.jpg/1200px-Phoenix-Fabelwesen.jpg',
+    photo: 'https://i.imgur.com/ioNvVBE.jpg',
     country_name: 'Egypt',
     country_code: 'EG',
     books:
@@ -38,8 +35,7 @@ export const creatures = [
   },
   {
     name: 'Mermaid',
-    photo:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Mermaid_by_John_William_Waterhouse.jpg/1200px-Mermaid_by_John_William_Waterhouse.jpg',
+    photo: 'https://i.imgur.com/qHYYqg8.jpg',
     country_name: 'Worldwide',
     country_code: 'WW',
     books:
@@ -50,8 +46,7 @@ export const creatures = [
   },
   {
     name: 'Minotaur',
-    photo:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Minotauros_Knosos.jpg/1200px-Minotauros_Knosos.jpg',
+    photo: 'https://i.imgur.com/v9N2fRO.jpg',
     country_name: 'Greece',
     country_code: 'GR',
     books:
@@ -62,8 +57,7 @@ export const creatures = [
   },
   {
     name: 'Griffin',
-    photo:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Griffin_statue_in_Kutaisi.jpg/1200px-Griffin_statue_in_Kutaisi.jpg',
+    photo: 'https://i.imgur.com/n9JGQM1.jpg',
     country_name: 'Persia',
     country_code: 'IR',
     books:
@@ -74,8 +68,7 @@ export const creatures = [
   },
   {
     name: 'Sphinx',
-    photo:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Sphinx_from_Hatshepsut_Temple.jpg/1200px-Sphinx_from_Hatshepsut_Temple.jpg',
+    photo: 'https://i.imgur.com/tnxl4YF.jpg',
     country_name: 'Egypt',
     country_code: 'EG',
     books: 'The Riddle of the Sphinx,Oedipus Rex,The Kane Chronicles',
@@ -85,8 +78,7 @@ export const creatures = [
   },
   {
     name: 'Centaur',
-    photo:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Centaurs_from_a_fresco_in_Pompeii.jpg/1200px-Centaurs_from_a_fresco_in_Pompeii.jpg',
+    photo: 'https://i.imgur.com/YbDFsOB.jpg',
     country_name: 'Greece',
     country_code: 'GR',
     books:
@@ -97,8 +89,7 @@ export const creatures = [
   },
   {
     name: 'Banshee',
-    photo:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Banshee.jpg/1200px-Banshee.jpg',
+    photo: 'https://i.imgur.com/RB37vJ3.jpg',
     country_name: 'Ireland',
     country_code: 'IE',
     books: 'Irish Folklore,Macbeth,Harry Potter and the Chamber of Secrets',
@@ -108,8 +99,7 @@ export const creatures = [
   },
   {
     name: 'Yeti',
-    photo:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Yeti_at_Everest_base_camp.jpg/1200px-Yeti_at_Everest_base_camp.jpg',
+    photo: 'https://i.imgur.com/tppjLQR.jpg',
     country_name: 'Nepal',
     country_code: 'NP',
     books: 'Tibetan Folklore,Tintin in Tibet,Monsters Inc.',
@@ -119,8 +109,7 @@ export const creatures = [
   },
   {
     name: 'Hydra',
-    photo:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Hydra-Farnese-08389.JPG/1200px-Hydra-Farnese-08389.JPG',
+    photo: 'https://i.imgur.com/wg46gCm.jpg',
     country_name: 'Greece',
     country_code: 'GR',
     books:
@@ -131,8 +120,7 @@ export const creatures = [
   },
   {
     name: 'Werewolf',
-    photo:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Werewolf_by_Lynton_Levengood.jpg/1200px-Werewolf_by_Lynton_Levengood.jpg',
+    photo: 'https://i.imgur.com/4aP3UIU.jpg',
     country_name: 'Worldwide',
     country_code: 'WW',
     books: 'The Epic of Gilgamesh,Dracula,Twilight Saga',
@@ -142,8 +130,7 @@ export const creatures = [
   },
   {
     name: 'Vampire',
-    photo:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Vampire_by_Philip_Burne-Jones.jpg',
+    photo: 'https://i.imgur.com/ZpEcIjP.jpg',
     country_name: 'Worldwide',
     country_code: 'WW',
     books: 'The Vampyre,Dracula,Interview with the Vampire',
@@ -153,8 +140,7 @@ export const creatures = [
   },
   {
     name: 'Fairy',
-    photo:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Cicely_Mary_Barker_-Flower_Fairies-The_Song_of_the_Fuchsia_Fairy.jpg',
+    photo: 'https://i.imgur.com/I4WYpcX.jpg',
     country_name: 'Worldwide',
     country_code: 'WW',
     books: 'A Midsummer Night’s Dream,Peter Pan,Artemis Fow',
@@ -164,8 +150,7 @@ export const creatures = [
   },
   {
     name: 'Cyclops',
-    photo:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Polyphemus_Mostra_di_Pompei_2019.jpg/1200px-Polyphemus_Mostra_di_Pompei_2019.jpg',
+    photo: 'https://i.imgur.com/43iDbGT.jpg',
     country_name: 'Greece',
     country_code: 'GR',
     books:
@@ -176,8 +161,7 @@ export const creatures = [
   },
   {
     name: 'Medusa',
-    photo:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Medusa_by_Caravaggio_2.jpg/1200px-Medusa_by_Caravaggio_2.jpg',
+    photo: 'https://i.imgur.com/CzeEekB.jpg',
     country_name: 'Greece',
     country_code: 'GR',
     books:
@@ -188,8 +172,7 @@ export const creatures = [
   },
   {
     name: 'Kraken',
-    photo:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Kraken_by_Johnny_Automatic.svg/1200px-Kraken_by_Johnny_Automatic.svg.png',
+    photo: 'https://i.imgur.com/AOXO08w.jpg',
     country_name: 'Norway',
     country_code: 'NO',
     books:
@@ -198,21 +181,10 @@ export const creatures = [
       'A mythical creature that is a giant squid-like monster that lives in the depths of the sea. It is feared by sailors and fishermen. It can create whirlpools and drag ships and whales to their doom.',
     characteristics: 'Tentacled,Aquatic,Monstrous',
   },
+
   {
     name: 'Zombie',
-    photo:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Zombie-walk_paris_2011.jpg/1200px-Zombie-walk_paris_2011.jpg',
-    country_name: 'Haiti',
-    country_code: 'HT',
-    books: 'The Serpent and the Rainbow,World War Z,The Walking Dead',
-    description:
-      'A mythical creature that is a reanimated corpse that has no free will or intelligence. It is created by a sorcerer or a virus. It feeds on the flesh and brains of the living. It can infect others with its bite.',
-    characteristics: 'Undead,Cannibalistic,Infectious',
-  },
-  {
-    name: 'Zombie',
-    photo:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Zombie-walk_paris_2011.jpg/1200px-Zombie-walk_paris_2011.jpg',
+    photo: 'https://i.imgur.com/U5Vo2aQ.jpg',
     country_name: 'Haiti',
     country_code: 'HT',
     books: 'The Serpent and the Rainbow,World War Z,The Walking Dead',
@@ -222,8 +194,7 @@ export const creatures = [
   },
   {
     name: 'Elf',
-    photo:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Elf_by_Luis_Ricardo_Falero.jpg/1200px-Elf_by_Luis_Ricardo_Falero.jpg',
+    photo: 'https://i.imgur.com/VCh21fc.jpg',
     country_name: 'Germany',
     country_code: 'DE',
     books: 'German Folklore,The Lord of the Rings,The Witcher',
@@ -233,8 +204,7 @@ export const creatures = [
   },
   {
     name: 'Goblin',
-    photo:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Goblin.jpg/1200px-Goblin.jpg',
+    photo: 'https://i.imgur.com/51aLhpI.jpg',
     country_name: 'Europe',
     country_code: 'EU',
     books:
