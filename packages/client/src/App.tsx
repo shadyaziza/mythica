@@ -9,7 +9,6 @@ import {
   ColorSchemeProvider,
   Flex,
   MantineProvider,
-  useMantineColorScheme,
 } from '@mantine/core';
 import { SwitchToggle } from './Components';
 <<<<<<< Updated upstream
@@ -53,7 +52,6 @@ function App() {
             <Flex
               mih={50}
               my={-500}
-              // bg="rgba(0, 0, 0, .3)"
               gap="lg"
               align="start"
               justify="space-between"
