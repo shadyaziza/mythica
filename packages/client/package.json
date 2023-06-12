@@ -18,6 +18,8 @@
     "@trpc/client": "^10.27.1",
     "@trpc/react-query": "^10.27.1",
     "@trpc/server": "^10.27.1",
+    "overmind": "^28.0.2",
+    "overmind-react": "^29.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-query": "^3.39.3",

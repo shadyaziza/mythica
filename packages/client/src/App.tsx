@@ -12,10 +12,16 @@ import {
   useMantineColorScheme,
 } from '@mantine/core';
 import { SwitchToggle } from './Components';
+<<<<<<< Updated upstream
 // 1. npm i server --workspace=client
 // create lib/trpc.ts
 // 2. npm i @trpc/server @trpc/client @trpc/react-query @tanstack/react-query --workspace=client
 // 3. handle app.ts
+=======
+import { Provider } from 'overmind-react';
+import { appState } from './state';
+import { GameResult } from './Components/GameResult';
+>>>>>>> Stashed changes
 
 const BACKEND_URL = 'http://localhost:3000/mythica';
 
@@ -35,11 +41,13 @@ function App() {
     setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
 
   return (
-    <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
-      <ColorSchemeProvider
-        colorScheme={colorScheme}
-        toggleColorScheme={toggleColorScheme}
+    <Provider value={appState}>
+      <MantineProvider
+        theme={{ colorScheme }}
+        withGlobalStyles
+        withNormalizeCSS
       >
+<<<<<<< Updated upstream
         <trpc.Provider queryClient={queryClient} client={trpcClient}>
           <QueryClientProvider client={queryClient}>
             <Flex
@@ -60,6 +68,33 @@ function App() {
         </trpc.Provider>
       </ColorSchemeProvider>
     </MantineProvider>
+=======
+        <ColorSchemeProvider
+          colorScheme={colorScheme}
+          toggleColorScheme={toggleColorScheme}
+        >
+          <trpc.Provider queryClient={queryClient} client={trpcClient}>
+            <QueryClientProvider client={queryClient}>
+              <Flex
+                mih={50}
+                my={-500}
+                gap="lg"
+                align="start"
+                justify="space-between"
+                direction="column"
+                wrap="wrap"
+                mb={100}
+              >
+                <SwitchToggle />
+                <RandomCreature />
+                <GameResult />
+              </Flex>
+            </QueryClientProvider>
+          </trpc.Provider>
+        </ColorSchemeProvider>
+      </MantineProvider>
+    </Provider>
+>>>>>>> Stashed changes
   );
 }
 

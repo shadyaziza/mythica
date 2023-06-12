@@ -13,6 +13,7 @@ import {
 } from '@mantine/core';
 import { IconHeart, IconPlayerTrackNext } from '@tabler/icons-react';
 import { CreatureDetails } from '.';
+import { useAction } from '../state';
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -41,6 +42,10 @@ const useStyles = createStyles((theme) => ({
 }));
 
 export function RandomCreature() {
+  const actions = useAction() as {
+    huntCreature: (id: number) => void;
+  };
+
   const response = trpc.creature.getRandom.useQuery();
 
   const { classes } = useStyles();
@@ -55,8 +60,19 @@ export function RandomCreature() {
   const creature = response.data?.creature;
 
   return (
+<<<<<<< Updated upstream
     <Suspense fallback={<AppLoader />}>
       <Card withBorder radius="md" p="md" className={classes.card}>
+=======
+    <>
+      <Card
+        key={creature.id}
+        withBorder
+        radius="md"
+        p="md"
+        className={classes.card}
+      >
+>>>>>>> Stashed changes
         <Card.Section>
           <Image src={creature.photo} alt={creature.name} height={300} />
         </Card.Section>
@@ -80,7 +96,15 @@ export function RandomCreature() {
 
         <Group mt="xs">
           <ActionIcon variant="default" radius="md" size={36}>
-            <IconHeart size="1.1rem" className={classes.like} stroke={1.5} />
+            <IconHeart
+              onClick={() => {
+                actions.huntCreature(creature.id);
+                response.refetch();
+              }}
+              size="1.1rem"
+              className={classes.like}
+              stroke={1.5}
+            />
           </ActionIcon>
           <ActionIcon variant="default" radius="md" size={36}>
             <IconPlayerTrackNext
